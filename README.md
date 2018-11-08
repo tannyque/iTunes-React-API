@@ -1,5 +1,21 @@
 # Music Chart Homework
 
+## How to load the app
+
+Download the repo and enter the following into the console whilst in the root directory:
+
+```
+npm install
+```
+
+Run the app in development mode (leave running in a terminal window):
+
+```
+npm start
+```
+Open http://localhost:3000 to view it in the browser if it does not automatically open.
+
+
 ## Learning objectives
 - Practise making a request in a React app and passing the data from that request down the chain of components
 - Practise using stateless components
