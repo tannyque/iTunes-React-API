@@ -9,9 +9,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-  monospace;
+.genre-selector {
+  display: block;
+  text-align: center;
+}
+
+select {
+  margin-left: 10px;
+  font-size: 20px;
 }
 
 ol {

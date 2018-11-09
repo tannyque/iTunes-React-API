@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChartList from './ChartList'
+import GenreSelector from '../components/GenreSelector'
 
 class ChartContainer extends Component {
   constructor(props) {
@@ -7,19 +8,31 @@ class ChartContainer extends Component {
     this.state = {
       songs: null
     }
+    this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
-  componentDidMount(){
-    fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
+  componentDidMount() {
+    this.loadSongs(this.props.genres[0].url)
+  }
+
+  loadSongs(url){
+    fetch(url)
     .then(res => res.json())
-    .then(songs => this.setState({songs: songs}))
+    .then(songs => this.setState({songs: songs.feed.entry}))
+  }
+
+  handleSelectChange(event){
+    this.loadSongs(event.target.value);
   }
 
   render(){
     return(
       <div>
-        <h1>Top 20 Songs</h1>
-        <ChartList className="chart-list" songs={this.state.songs} />
+        <h1>UK Top 20 Songs</h1>
+        <GenreSelector handleSelectChange={this.handleSelectChange}
+        genres={this.props.genres} />
+        <ChartList className="chart-list" songs={this.state.songs}
+        handleSelectChange={this.handleSelectChange} />
       </div>
     )
   }

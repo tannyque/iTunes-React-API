@@ -8,7 +8,7 @@ const ChartList = (props) => {
   else {
     return (
       <ol>
-         {props.songs.feed.entry.map((song, index) =>{
+         {props.songs.map((song, index) =>{
           return <Song song={song} key={index} />
         })}
       </ol>
