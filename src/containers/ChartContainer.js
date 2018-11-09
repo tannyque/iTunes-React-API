@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SongList from './SongList'
+import ChartList from './ChartList'
 
-class SongContainer extends Component {
+class ChartContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,11 +19,11 @@ class SongContainer extends Component {
     return(
       <div>
         <h1>Top 20 Songs</h1>
-        <SongList className="song-list" songs={this.state.songs} />
+        <ChartList className="chart-list" songs={this.state.songs} />
       </div>
     )
   }
 }
 
 
-export default SongContainer;
+export default ChartContainer;

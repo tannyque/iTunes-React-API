@@ -1,9 +1,9 @@
 import React from 'react';
 import Song from '../components/Song.js'
 
-const SongList = (props) => {
+const ChartList = (props) => {
   if (props.songs === null) {
-    return 'nothing to see here';
+    return 'Loading...';
   }
   else {
     return (
@@ -17,4 +17,4 @@ const SongList = (props) => {
 
 }
 
-export default SongList;
+export default ChartList;

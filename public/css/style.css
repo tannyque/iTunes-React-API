@@ -21,6 +21,14 @@ ol {
   list-style-position: inside;
 }
 
+li {
+  margin-top: 50px;
+}
+
+audio {
+  margin-top: 10px;
+}
+
 img {
   border-radius: 10px;
 }

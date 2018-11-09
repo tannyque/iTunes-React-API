@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import SongContainer from './containers/SongContainer'
+import ChartContainer from './containers/ChartContainer'
 
 class App extends Component {
   render() {
     return (
-      <SongContainer className="song-container" />
+      <ChartContainer className="chart-container" />
     )
   }
 }
